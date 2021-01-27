@@ -1,1 +1,55 @@
-<p>progress works!</p>
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title" id="h44">
+          Striped Progress bar
+          <div class="progress m-t-20 active">
+            <div
+              class="progress-bar bg-primary progress-bar-striped"
+              style="height: 6px"
+              role="progressbar"
+              [style.width]="getProgress1"
+            ></div>
+          </div>
+          <div class="progress m-t-20 active">
+            <div
+              class="progress-bar bg-info progress-bar-striped"
+              style="height: 6px"
+              role="progressbar"
+              [style.width]="getProgress2"
+            ></div>
+          </div>
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <app-increaser
+          [value]="50"
+          [minValue]="0"
+          [maxValue]="100"
+          [increaseDecrease]="5"
+          (value)="this.progress1 = $event"
+        ></app-increaser>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <app-increaser
+          [value]="5"
+          [minValue]="0"
+          [maxValue]="10"
+          [increaseDecrease]="1"
+          (value)="this.progress2 = $event"
+        ></app-increaser>
+      </div>
+    </div>
+  </div>
+</div>
