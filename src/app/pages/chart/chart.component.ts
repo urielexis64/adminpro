@@ -3,7 +3,7 @@ import { Color } from 'ng2-charts';
 
 @Component({
   selector: 'app-graphic1',
-  templateUrl: './graphic1.component.html',
+  templateUrl: './chart.component.html',
   styles: [],
 })
 export class Graphic1Component {
