@@ -1,1 +1,26 @@
-<p>graphic1 works!</p>
+<div class="row">
+  <div class="col-6">
+    <app-dognut
+      title="Sales"
+      [labels]="labels1"
+      [data]="data1"
+      [colors]="colors1"
+    ></app-dognut>
+  </div>
+  <div class="col-6">
+    <app-dognut
+      title="Employees"
+      [labels]="labels2"
+      [data]="data2"
+      [colors]="colors2"
+    ></app-dognut>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <app-dognut [labels]="" [data]=""></app-dognut>
+  </div>
+  <div class="col-6">
+    <app-dognut [labels]="" [data]=""></app-dognut>
+  </div>
+</div>
