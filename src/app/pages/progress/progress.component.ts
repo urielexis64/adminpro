@@ -9,11 +9,11 @@ export class ProgressComponent {
   progress1: number = 0;
   progress2: number = 0;
 
-  get getProgress1() {
-    return `${this.progress1}%`;
+  getProgress1(maxValue: number) {
+    return `${(100 / maxValue) * this.progress1}%`;
   }
 
-  get getProgress2() {
-    return `${this.progress2}%`;
+  getProgress2(maxValue: number) {
+    return `${(100 / maxValue) * this.progress2}%`;
   }
 }
