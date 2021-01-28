@@ -11,3 +11,11 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+#themecolors .selector {
+  cursor: pointer;
+}
+
+* {
+  transition: 0.4s;
+}
