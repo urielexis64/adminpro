@@ -2,14 +2,14 @@
   <div class="col-12">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title" id="h44">
+        <h4 class="card-title">
           Striped Progress bar
           <div class="progress m-t-20 active">
             <div
               class="progress-bar bg-primary progress-bar-striped"
               style="height: 6px"
               role="progressbar"
-              [style.width]="getProgress1"
+              [style.width]="getProgress1(increaser1.maxValue)"
             ></div>
           </div>
           <div class="progress m-t-20 active">
@@ -17,7 +17,7 @@
               class="progress-bar bg-info progress-bar-striped"
               style="height: 6px"
               role="progressbar"
-              [style.width]="getProgress2"
+              [style.width]="getProgress2(increaser2.maxValue)"
             ></div>
           </div>
         </h4>
@@ -30,10 +30,12 @@
     <div class="card">
       <div class="card-body">
         <app-increaser
-          [value]="50"
+          #increaser1
+          [value]="progress1"
           [minValue]="0"
           [maxValue]="100"
           [increaseDecrease]="5"
+          [btnClass]="'btn-primary'"
           (value)="this.progress1 = $event"
         ></app-increaser>
       </div>
@@ -43,10 +45,12 @@
     <div class="card">
       <div class="card-body">
         <app-increaser
-          [value]="5"
-          [minValue]="0"
-          [maxValue]="10"
-          [increaseDecrease]="1"
+          #increaser2
+          [value]="progress2"
+          [minValue]="-50"
+          [maxValue]="50"
+          [increaseDecrease]="10"
+          [btnClass]="'btn-info'"
           (value)="this.progress2 = $event"
         ></app-increaser>
       </div>
