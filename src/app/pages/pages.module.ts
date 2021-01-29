@@ -8,15 +8,17 @@ import { ComponentsModule } from '../components/components.module';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
-import { Graphic1Component } from './graphic1/graphic1.component';
+import { ChartComponent } from './chart/chart.component';
 import { PagesComponent } from './pages.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     ProgressComponent,
-    Graphic1Component,
+    ChartComponent,
     PagesComponent,
+    AccountSettingsComponent,
   ],
   imports: [
     CommonModule,
@@ -28,8 +30,9 @@ import { PagesComponent } from './pages.component';
   exports: [
     DashboardComponent,
     ProgressComponent,
-    Graphic1Component,
+    ChartComponent,
     PagesComponent,
+    AccountSettingsComponent,
   ],
 })
 export class PagesModule {}
