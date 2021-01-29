@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { Graphic1Component } from './chart/chart.component';
+import { ChartComponent } from './chart/chart.component';
 import { ProgressComponent } from './progress/progress.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesComponent } from './pages.component';
@@ -14,7 +14,7 @@ const routes: Routes = [
     children: [
       { path: '', component: DashboardComponent },
       { path: 'progress', component: ProgressComponent },
-      { path: 'chart', component: Graphic1Component },
+      { path: 'chart', component: ChartComponent },
       { path: 'account-settings', component: AccountSettingsComponent },
     ],
   },

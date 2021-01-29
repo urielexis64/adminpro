@@ -6,7 +6,7 @@ import { Color } from 'ng2-charts';
   templateUrl: './chart.component.html',
   styles: [],
 })
-export class Graphic1Component {
+export class ChartComponent {
   public labels1: string[] = ['Download Sales', 'In-order Sales', 'Others'];
   public data1 = [[123, 321, 356]];
   public colors1: Color[] = [
